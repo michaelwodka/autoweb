@@ -45,7 +45,7 @@
 	});
 
 	firebase.auth().onAuthStateChanged(firebaseUser => {
-		var text = document.querySelector("#user")
+		//var text = document.querySelector("#user")
 		var hiText = document.querySelector("#hiText")
 		if(firebaseUser){
 			var email = firebaseUser.email
@@ -53,7 +53,7 @@
 			document.getElementById("logLabel").style.display = "none";
 			document.getElementById("hiText").style.display = "block";
 			document.getElementById("logOut").style.display = "block";
-			text.textContent = "The current user is " + email + ".";
+			//text.textContent = "The current user is " + email + ".";
 			hiText.textContent = "Hi " + email
 			console.log(firebaseUser);
 		} else {
@@ -61,9 +61,20 @@
 			document.getElementById("logOut").style.display = "none";
 			document.getElementById("signLabel").style.display = "block";
 			document.getElementById("logLabel").style.display = "block";
-			text.textContent = "No one is logged in.";
+			//text.textContent = "No one is logged in.";
 			console.log('not logged in');
 		}
 	});
+
+
+var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
+
+var driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
+
+driver.get('http://www.google.com/');
 
 	
