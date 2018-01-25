@@ -66,15 +66,22 @@
 		}
 	});
 
+var start = document.getElementById('Start')
 
-var webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
+// start.addEventListener("click", autoPop);
 
-var driver = new webdriver.Builder()
-    .forBrowser('chrome')
-    .build();
+// function autoPop() {
+// 	var storage = firebase.storage();
+// 	var storageRef = storage.ref();
+// 	var spaceRef = storageRef.child('pythonscript/autoweb.exe');
+// 	spaceRef.getDownloadURL().then(function(url) {
+// 	    var hiddenElement = document.createElement('a');
+// 	    hiddenElement.href = url;
+// 	    hiddenElement.target = '_blank';
+// 	    hiddenElement.download = 'doc.txt';
+// 	    hiddenElement.click();
+// 	});
 
-driver.get('http://www.google.com/');
+// };
 
 	

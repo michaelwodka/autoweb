@@ -61,7 +61,7 @@
 
 					<!-- Modal footer -->
 					<div class="modal-footer">
-						<button id ="btnLogIn" class= "btn btn-primary btn-lg" data-dismiss="modal">Log In</button>
+						<a id ="btnLogIn" class= "btn btn-primary btn-lg" data-dismiss="modal">Log In</a>
 					</div>
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 
 					<!-- Modal footer -->
 					<div class="modal-footer">
-						<button id ="btnSignUp" class= "btn btn-primary btn-lg" data-dismiss="modal">Sign Up</button>
+						<a id ="btnSignUp" class= "btn btn-primary btn-lg" data-dismiss="modal">Sign Up</a>
 					</div>
 				</div>
 			</div>
@@ -117,12 +117,15 @@
 	<section class = "intro"><a name = "intro"></a>
 		<div class = "content">
 			<div class = "container">
-				<h1 class= "header1">Auto Fill in Repetitive Web Forms</h1>
+				<h1 class= "header1" id ="h1er">Auto Fill in Repetitive Web Forms</h1>
 				<!-- <h3 id ="user"></h3> -->
 			</div>
-			<div class = "container" id ="filer">
-				<input type="file" id="inputfile" />
-			</div>
+			<input type="file" id="inputfile" />
+			<div class="form-group row">
+				<label for = "linker">http://</label>
+				<input type="text" id="linker" required>
+			</div>	
+			<a id ="Start" class= "btn btn-primary btn-lg">Start</a>
 		</div>
 	</section>
 

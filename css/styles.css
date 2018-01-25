@@ -33,7 +33,7 @@ body{
 .header1{
 	font-size: 48px;
 	font-weight: 800;
-	margin-bottom: 125px;
+	margin-bottom: 100px;
 	margin-top: 125px;
 }
 
@@ -62,12 +62,21 @@ body{
 	font-weight: 800;
 }
 
-.inputfile{
-	text-align: center;
- 	margin: auto;
+#inputfile{
+	margin-left: 45%;
+	margin-bottom: 50px;
 }
 
-#inputfile{
+#linker{
 	margin: auto;
+	width: 25%;
+	margin-bottom: 40px;
+}
 
+#Start{
+	width:100px;
+}
+
+.btn:focus {
+  	outline: none;
 }
