@@ -18,9 +18,9 @@ def process():
     opts = webdriver.ChromeOptions()
     opts.binary_location = chrome_bin
     driver = webdriver.Chrome(executable_path="chromedriver", chrome_options=opts)
-    driver.get('https://https://login.salesforce.com/')
+    driver.get('https://login.salesforce.com/')
     driver.find_element_by_id("username").send_keys("mwodka@cebglobal.com")
-    driver.find_element_by_id("password").send_keys("Opti158015")
+    driver.find_element_by_id("password").send_keys("Opti1580!2")
     driver.find_element_by_id("Login").click()
     return driver.current_url
 
