@@ -25,7 +25,7 @@ def process():
         driver.find_element_by_id("login-email").send_keys(request.form['emaily'])
         driver.find_element_by_id("login-password").send_keys(request.form['passy'])
         driver.find_element_by_id("login-submit").click()
-        return render_template('results.html')
+        return driver.current_url
 
     '''if request.method == 'GET':
         return render_template('results.html')'''
