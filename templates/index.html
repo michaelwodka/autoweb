@@ -117,15 +117,21 @@
 	<section class = "intro"><a name = "intro"></a>
 		<div class = "content">
 			<div class = "container">
-				<h1 class= "header1" id ="h1er">Auto Fill in Repetitive Web Forms</h1>
+				<h1 class= "header1" id ="h1er">LinkedIn Profile Scraper</h1>
 				<!-- <h3 id ="user"></h3> -->
 			</div>
-			<input type="file" id="inputfile" />
-			<div class="form-group row">
-				<label for = "linker">http://</label>
-				<input type="text" id="linker" required>
-			</div>	
-			<a id ="Start" class= "btn btn-primary btn-lg" href="static/html/start.html">Initiate!!</a>
+				<form action="/results.html" method="post">
+					<div class="form-group row">
+						<input type="text" name="emaily" id="linker" placeholder="LinkedIn Email" required>
+					</div>
+					<div class="form-group row">
+						<input type="password" name ="passy" id="linker" placeholder="LinkedIn Password" required>
+					</div>
+					<div class="form-group row">
+						<input type="text" name = "criteria" id="linker" placeholder="Search Criteria" required>
+					</div>	
+					<button id ="Start" class= "btn btn-primary btn-lg">Search</button>
+				</form>
 		</div>
 	</section>
 

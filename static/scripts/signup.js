@@ -84,4 +84,3 @@ var start = document.getElementById('Start')
 
 // };
 
-	
