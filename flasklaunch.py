@@ -28,7 +28,6 @@ def process():
         driver.find_element_by_id("login-email").send_keys(request.form['emaily'])
         driver.find_element_by_id("login-password").send_keys(request.form['passy'])
         driver.find_element_by_id("login-submit").click()
-        time.sleep(10)
         search = driver.find_element_by_css_selector("input[placeholder='Search']")
         search.send_keys(request.form['criteria'])
         search.send_keys(Keys.RETURN)
@@ -56,6 +55,6 @@ def process():
 
         return render_template('results.html', final_list=final_list)
 
-    # run the application
-    if __name__ == "__main__":
-        app.run()
+# run the application
+if __name__ == "__main__":
+    app.run()
