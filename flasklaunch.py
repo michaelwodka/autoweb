@@ -39,7 +39,7 @@ def process():
 
         height = driver.get_window_size()['height']
 
-        return height
+        return str(height)
 
         scroll_text = "window.scrollTo(0, {})".format(height)
         driver.execute_script(scroll_text)
