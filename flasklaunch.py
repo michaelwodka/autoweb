@@ -28,7 +28,7 @@ def process():
         driver.find_element_by_id("login-email").send_keys(request.form['emaily'])
         driver.find_element_by_id("login-password").send_keys(request.form['passy'])
         driver.find_element_by_id("login-submit").click()
-        time.sleep(3)
+        time.sleep(10)
         search = driver.find_element_by_css_selector("input[placeholder='Search']")
         search.send_keys(request.form['criteria'])
         search.send_keys(Keys.RETURN)
