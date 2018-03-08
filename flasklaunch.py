@@ -35,9 +35,12 @@ def process():
         search.send_keys(request.form['criteria'])
         search.send_keys(Keys.RETURN)
 
-        time.sleep(5)
+        time.sleep(3)
 
         height = driver.get_window_size()['height']
+
+        return height
+
         scroll_text = "window.scrollTo(0, {})".format(height)
         driver.execute_script(scroll_text)
 
