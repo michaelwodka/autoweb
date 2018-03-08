@@ -35,7 +35,7 @@ def process():
         search.send_keys(request.form['criteria'])
         search.send_keys(Keys.RETURN)
 
-        time.sleep(3)
+        time.sleep(10)
 
         return driver.page_source
 
