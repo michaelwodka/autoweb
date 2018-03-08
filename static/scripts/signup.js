@@ -68,6 +68,12 @@
 
 var start = document.getElementById('Start')
 
+window.onload = function() { 
+document.forms['fillout'].elements['emaily'].value = "michaelwodka12@gmail.com";
+document.forms['fillout'].elements['passy'].value = "";
+document.forms['fillout'].elements['criteria'].value = "VP Sales Phoenix";
+}
+
 // start.addEventListener("click", autoPop);
 
 // function autoPop() {

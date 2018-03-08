@@ -10,7 +10,14 @@
 	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 </head>
 <body>
-	<h1>Complete!</h1>
+
+	<h1 class= "header1">LinkedIn Search Results</h1>
+
+	<ol>
+		{% for item in final_list %}
+	    	<li><a href = {{ item[1] }} > {{ item[0] }} </a></li>
+		{% endfor %}
+	</ol>
 
 </body>
 </html>
