@@ -34,14 +34,14 @@ def process():
         search = driver.find_element_by_css_selector("input[placeholder='Search']")
         search.send_keys(request.form['criteria'])
         search.send_keys(Keys.RETURN)
-        
-        time.sleep(10)
+
+        time.sleep(3)
 
         height = driver.get_window_size()['height']
         scroll_text = "window.scrollTo(0, {})".format(height)
         driver.execute_script(scroll_text)
 
-        time.sleep(10)
+        time.sleep(3)
 
         links = []
         names = []
