@@ -38,9 +38,11 @@ def process():
         time.sleep(3)
 
         height = driver.get_window_size()['height']
-
         scroll_text = "window.scrollTo(0, {})".format(height)
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+        '''driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")'''
+
+        driver.execute_script("window.scrollTo(0, 400)")
 
         time.sleep(3)
 
