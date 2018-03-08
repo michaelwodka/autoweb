@@ -42,7 +42,7 @@ def process():
 
         '''driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")'''
 
-        driver.execute_script("window.scrollTo(0, 400)")
+        driver.execute_script("window.scrollTo(0, 1000)")
 
         time.sleep(3)
 
