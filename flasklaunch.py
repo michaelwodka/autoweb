@@ -57,6 +57,8 @@ def process():
 
         final_list = list(zip(names, links))
 
+        driver.quit()
+
         return render_template('results.html', final_list=final_list)
 
 # run the application
