@@ -29,32 +29,34 @@ def process():
         driver.find_element_by_id("login-password").send_keys(request.form['passy'])
         driver.find_element_by_id("login-submit").click()
 
-        search = driver.find_element_by_css_selector("input[placeholder='Search']")
-        search.send_keys(request.form['criteria'])
-        search.send_keys(Keys.RETURN)
-        time.sleep(3)
-        height = driver.get_window_size()['height']
-        scroll_text = "window.scrollTo(0, {})".format(height)
-        driver.execute_script(scroll_text)
-        time.sleep(3)
+        return driver.current_url
 
-        links = []
-        names = []
-        html = driver.page_source
-        soup = BeautifulSoup(html, 'html.parser')
-        li = soup.find("ul", {"class": "search-results__list"})
-        div = li.find_all("div", {"class": "search-result__info"})
+    '''search = driver.find_element_by_css_selector("input[placeholder='Search']")
+    search.send_keys(request.form['criteria'])
+    search.send_keys(Keys.RETURN)
+    time.sleep(3)
+    height = driver.get_window_size()['height']
+    scroll_text = "window.scrollTo(0, {})".format(height)
+    driver.execute_script(scroll_text)
+    time.sleep(3)
 
-        for item in div:
-            for url in item.find_all("a", {"class": "search-result__result-link"}):
-                if url.get('href').startswith("/in/"):
-                    links.append("https://www.linkedin.com" + url.get('href'))
-                    for item in url.find_all('span', {"class": "name"}):
-                        names.append(item.getText())
+    links = []
+    names = []
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    li = soup.find("ul", {"class": "search-results__list"})
+    div = li.find_all("div", {"class": "search-result__info"})
 
-        final_list = list(zip(names, links))
+    for item in div:
+        for url in item.find_all("a", {"class": "search-result__result-link"}):
+            if url.get('href').startswith("/in/"):
+                links.append("https://www.linkedin.com" + url.get('href'))
+                for item in url.find_all('span', {"class": "name"}):
+                    names.append(item.getText())
 
-        return render_template('results.html', final_list=final_list)
+    final_list = list(zip(names, links))
+
+    return render_template('results.html', final_list=final_list)'''
 
 # run the application
 if __name__ == "__main__":
