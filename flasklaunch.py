@@ -35,13 +35,13 @@ def process():
         search.send_keys(request.form['criteria'])
         search.send_keys(Keys.RETURN)
 
-        time.sleep(3)
+        time.sleep(5)
 
         height = driver.get_window_size()['height']
         scroll_text = "window.scrollTo(0, {})".format(height)
         driver.execute_script(scroll_text)
 
-        time.sleep(3)
+        time.sleep(5)
 
         links = []
         names = []
